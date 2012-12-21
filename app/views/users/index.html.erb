@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body
+{
+background-color:#b0c4de;
+}
+h2 {color :red;}
+p.ex {color:rgb(0,0,255);}
+</style>
+</head>
+
+
+<body>
+<h1 align='center'> WELCOME !!!</h1><br/><br/>
+
+<h2> Listing Users</h2>
+
+<table>
+  <tr>
+    <th>Name</th> &nbsp&nbsp&nbsp&nbsp&nbsp
+    <th>Email</th> &nbsp&nbsp&nbsp&nbsp&nbsp
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.name %></td>&nbsp&nbsp&nbsp&nbsp&nbsp
+    <td><%= user.email %></td>&nbsp&nbsp&nbsp&nbsp&nbsp
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+<p>Are you a New User ??</p><%= link_to 'Click here ', new_user_path %>
+</body>
+</html>

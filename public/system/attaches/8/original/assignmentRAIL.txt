@@ -1,0 +1,4 @@
+ A social netwrking site has blogs and discussion forums.
+Obviously blogs and discussion forums are written by only users of the site.
+ Other users can comment on the blogs as well as disussion forums.
+ While submitting the comment make sure that text is not empty.
