@@ -1,0 +1,20 @@
+
+Application: FileBoard
+
+  Description: Application will allow to upload files to the server and
+  manage them with a fancy UI
+
+.
+Acceptance Criteria:
+1. List of files uploaded to the file server.
+2. File should have icon, type, size, decription information.
+3. Option to upload new file to the server.
+4. Option to delete the existing file and information.
+5. The description of the file should be editable. 
+
+
+1. Good looking UI (not crude).
+2. UI can be created or copied to alter for avoiding trademark issues.
+3. Use of AJAX to enhance user experience.
+4. CRUD (Create Read Update Delete) Operation for all objects. 
+ Login authentication using Device gem
