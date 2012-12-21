@@ -7,7 +7,7 @@ body
 background-color:#b0c4de;
 }
 h2 {color :red;}
-p.ex {color:rgb(0,0,255);}
+h1 {color :green;}
 </style>
 </head>
 
@@ -33,6 +33,7 @@ p.ex {color:rgb(0,0,255);}
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	
   </tr>
 <% end %>
 </table>
@@ -40,6 +41,7 @@ p.ex {color:rgb(0,0,255);}
 <br />
 
 
-<p>Are you a New User ??</p><%= link_to 'Click here ', new_user_path %>
+<p>Are you a New User ??</p><%= link_to 'New User Click here ', new_user_path %><br/><br/>
+<%=link_to('LogOut', destroy_member_session_path, :method => "delete") %>
 </body>
 </html>
