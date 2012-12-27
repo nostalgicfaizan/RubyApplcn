@@ -1,14 +1,15 @@
 <%= form_for @user, :html => { :multipart => true } do |f| %>
 
+  
 
-  <div class="field">
+  <div class="field" align='center'>
     <%= f.label :name %><br/>
     <%= f.text_field :name %>
-   </div>
-   <div class="field">
+   </div><br/>
+   <div class="field" align='center'>
     <%= f.label :email %><br/>
     <%= f.text_field :email %>
-    </div>
+    </div><br/>
 
 
   <% if @user.errors.any? %>
@@ -23,18 +24,18 @@
     </div>
   <% end %>
   
-   <p>
-       <b> attachment </b><br/>
+   <p align='center'>
+       <b> Attachment </b><br/>
        <%= f.file_field :attach %>
-   </p>
+   </p><br/>
    
-   <p>
+   <p  align='center's>
       <b> Picture </b><br/>
       <%= f.file_field :pic %>
-   </p>
+   </p><br/>
 
-  
-  <div class="actions">
+
+  <div class="actions" align='center'>
     <%= f.submit %>
   </div>
 <% end %>

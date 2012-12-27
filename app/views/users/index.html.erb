@@ -6,33 +6,44 @@ body
 {
 background-color:#b0c4de;
 }
-h2 {color :red;}
+h2 {color :green;}
 h1 {color :green;}
+table,td, th
+{
+  border:1px solid brown;
+}
+th
+{
+  background-color: red;
+  color:blue;
+}
+
 </style>
 </head>
 
 
 <body>
-<h1 align='center'> WELCOME !!!</h1><br/><br/>
+<h1 align='center'><marquee behavior="alternate"> WELCOME !!! </marquee></h1><br/><br/>
 
-<h2> Listing Users</h2>
+<h2 align= 'center'> Listing Users</h2>
 
-<table>
-  <tr>
-    <th>Name</th> &nbsp&nbsp&nbsp&nbsp&nbsp
-    <th>Email</th> &nbsp&nbsp&nbsp&nbsp&nbsp
-    <th></th>
-    <th></th>
-    <th></th>
+<table border="1" align='center'>
+  <tr align= 'center'>
+    <th align= 'center'>Name</th> &nbsp&nbsp&nbsp
+    <th align= 'center'>Email</th> &nbsp&nbsp&nbsp
+    <th align= 'center'></th>&nbsp&nbsp&nbsp
+    <th align= 'center'></th>&nbsp&nbsp&nbsp
+    <th align= 'center'></th>
   </tr>
 
 <% @users.each do |user| %>
   <tr>
-    <td><%= user.name %></td>&nbsp&nbsp&nbsp&nbsp&nbsp
-    <td><%= user.email %></td>&nbsp&nbsp&nbsp&nbsp&nbsp
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td align= 'center'><%= user.name %></td>&nbsp&nbsp&nbsp
+    <td align= 'center'><%= user.email %></td>&nbsp&nbsp&nbsp
+    <td align= 'center'><%= link_to 'Show', user %></td>&nbsp&nbsp&nbsp
+    <td align= 'center'><%= link_to 'Edit', edit_user_path(user) %></td>&nbsp
+    &nbsp&nbsp
+    <td align= 'center'><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	
   </tr>
 <% end %>
@@ -41,7 +52,8 @@ h1 {color :green;}
 <br />
 
 
-<p>Are you a New User ??</p><%= link_to 'New User Click here ', new_user_path %><br/><br/>
+<p>Are you a New User ??</p><br/>
+<%= link_to 'New User Click here ', new_user_path %><br/><br/>
 <%=link_to('LogOut', destroy_member_session_path, :method => "delete") %>
 </body>
 </html>

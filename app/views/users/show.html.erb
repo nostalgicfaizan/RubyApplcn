@@ -1,8 +1,12 @@
 <html>
 <head>
 <style type="text/css">
+body
+{
+background-color:#b0c4de;
+}
 h2 {color:green;}
-h4 {color:green}
+h4 {color:green;} 
 </style>
 </head>
 
@@ -11,7 +15,7 @@ h4 {color:green}
 <p id="notice"><%= notice %></p><br/>
 
 
-	<%= image_tag @user.pic.url %><h3>Image Displayed</h3>
+	<%= image_tag @user.pic.url %><h2>Image Displayed Above</h2>
 	<a href="<%= @user.attach.url %> ">
         <h2> File Attached.Click here to Display the Content Information</h2></a>
     <br/>
@@ -20,11 +24,11 @@ h4 {color:green}
       
 
 <p>
-    <b>Name:</b></br>
-       <h4>Attach File Name</h4> <%= @user.attach_file_name %>
-       <h4>Attach File Content Type</h4> <%= @user.attach_content_type %>
-       <h4>Attach File Size </h4> <%= @user.attach_file_size%>
-	   <h4>Attach Updated At</h4> <%= @user.attach_updated_at %>
+    <b>Details :</b></br>
+       <h4>Attach File Name : &nbsp&nbsp<%= @user.attach_file_name %></h4>
+       <h4>Attach File Content Type : &nbsp&nbsp<%= @user.attach_content_type %></h4>
+       <h4>Attach File Size :  &nbsp&nbsp<%= @user.attach_file_size %></h4>
+	   <h4>Attach Updated At :  &nbsp&nbsp<%= @user.attach_updated_at %></h4>
 	 
 </p>
 
@@ -34,7 +38,7 @@ h4 {color:green}
 </p>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Edit', edit_user_path(@user) %> | 
 <%= link_to 'Back', users_path %>
 
 </body>
