@@ -11,7 +11,7 @@
   <div id="container">
   	 <div id="user_nav">
   	 	<% if member_signed_in? %>
-  	 	signed in as <%= current_member.email %>. Not you ?
+  	 	signed in as <%= current_member.email %>
   	 	<%=link_to "sign_out" , destroy_member_session_path,:method => "delete" %>
   	 	<% else %>
 
