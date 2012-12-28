@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<!--<style>
 body
 {
 background-color:#b0c4de;
@@ -18,32 +18,32 @@ th
   color:blue;
 }
 
-</style>
+</style> 
+-->
 </head>
 
 
 <body>
-<h1 align='center'><marquee behavior="alternate"> WELCOME TO FILE UPLOAD </marquee></h1><br/><br/>
+<h1><marquee behavior="alternate"> WELCOME TO FILE UPLOAD </marquee></h1><br/><br/>
 
-<h2 align= 'center'> Listing Users</h2>
+<h2> Listing Users</h2>
 
-<table border="1" align='center'>
-  <tr align= 'center'>
-    <th align= 'center'>Name</th> &nbsp&nbsp&nbsp
-    <th align= 'center'>Email</th> &nbsp&nbsp&nbsp
-    <th align= 'center'></th>&nbsp&nbsp&nbsp
-    <th align= 'center'></th>&nbsp&nbsp&nbsp
-    <th align= 'center'></th>
+<table align='center'>
+  <tr>
+    <th>Name</th> 
+    <th>Email</th> 
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% @users.each do |user| %>
   <tr>
-    <td align= 'center'><%= user.name %></td>&nbsp&nbsp&nbsp
-    <td align= 'center'><%= user.email %></td>&nbsp&nbsp&nbsp
-    <td align= 'center'><%= link_to 'Show', user %></td>&nbsp&nbsp&nbsp
-    <td align= 'center'><%= link_to 'Edit', edit_user_path(user) %></td>&nbsp
-    &nbsp&nbsp
-    <td align= 'center'><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= user.name %></td>
+    <td><%= user.email %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	
   </tr>
 <% end %>

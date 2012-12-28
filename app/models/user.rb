@@ -6,11 +6,16 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   
-  attr_accessible :email, :name, :attach, :pic
+    attr_accessible :name, :attach, :pic
   
- #    validates :email, :presence => true
-	 validates :name, :presence => true
+    # validates :email, :presence => true
+	  validates :name, :presence => true 
+    # validate :check_image_dimension
      has_attached_file :pic
-       # { :medium => "300x300>", :thumb => "100x100>" }
+     # :styles =>
+      # { :medium => "300x300>", :thumb => "100x100>" }
      has_attached_file :attach
-end
+
+     #validates_attachment :pic, :presence => true
+	   #content_type => { :content_type => "image/jpg" } 
+ end
