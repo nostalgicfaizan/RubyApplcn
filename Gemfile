@@ -8,6 +8,7 @@ gem 'rails', '3.2.9'
 
 gem "paperclip", "~> 2.7"
 gem 'devise'
+gem "cancan"
 
    
    group :development, :test do

@@ -1,0 +1,14 @@
+class ability 
+
+ include CanCan :: Ability 
+
+def initialize(user)
+
+ if user.is_admin (true)
+  can :manage, :all 
+ 
+ else 
+  can :read, :all
+end 
+end
+end
