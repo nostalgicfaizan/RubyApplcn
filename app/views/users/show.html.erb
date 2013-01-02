@@ -20,6 +20,10 @@ h4 {color:green;}
   left: 250px;
   width: 300px;
  } 
+ .link 
+ {
+
+ }
 
 </style>
 </head>
@@ -63,9 +67,9 @@ h4 {color:green;}
   <%= @user.email %>
 </p>
 
-
-<%= link_to 'Edit', edit_user_path(@user) %> | 
+<div class="link">
+<%= link_to 'Edit', edit_user_path(@user) %> 
 <%= link_to 'Back', users_path %>
-
+</div>
 </body>
 </html>
