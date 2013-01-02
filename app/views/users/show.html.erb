@@ -7,7 +7,6 @@ background-color:#b0c4de;
 }
 h2 {color:green;}
 h4 {color:green;} 
-
 .right
 {
   position:absolute;
@@ -24,10 +23,8 @@ h4 {color:green;}
  {
 
  }
-
 </style>
 </head>
-
 
 <body>
 <p id="notice"><%= notice %></p><br/>
@@ -39,6 +36,7 @@ h4 {color:green;}
         <h2> File Attached.  Click here to Display the Text File Content </h2></a>
     <br/>
 	
+  <% if @user.attach_file_name %>
  <p>
     <div class="left">
     <b>Attachment Details :</b></br>
@@ -49,8 +47,11 @@ h4 {color:green;}
        <h4>Attach File Size :  &nbsp&nbsp <%= @user.attach_file_size %></h4>
 	   <h4>Attach Updated At :  &nbsp&nbsp <%= @user.attach_updated_at %></h4>
    </div>
+   <% end %>
 	 
 </p>
+
+  <% if @user.pic_file_name %>
 <p> 
    <div class="right">
    <b> Pic Details :</b><br/>
@@ -60,6 +61,7 @@ h4 {color:green;}
      <h4>Pic File Size : <%= @user.pic_file_size %></h4>
      <h4>Pic Updated At : <%= @user.pic_updated_at %></h4>
    </div>
+   <% end %>
   </p>
        
 <p>

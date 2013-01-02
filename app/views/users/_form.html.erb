@@ -12,21 +12,29 @@
   <% end %>
 
   <div class="field" align='center'>
-    <%= f.label :Name %><br/>
+    <%= f.label :Name %>
     <%= f.text_field :name %>
-   </div><br/>
+   </div><br/><br/>
 
     <p align='center'>
-       <b> Attachment </b><br/>
+       <b> Attachment </b>
        <%= f.file_field :attach %>
-   </p><br/>
+   </p><br/><br/>
    
     <p align='center's>
-      <b> Picture </b><br/>
+      <b> Picture </b>
       <%= f.file_field :pic %>
-   </p><br/> 
+   </p><br/><br/> 
 
-   <div class="actions" align='center'>
-    <%= f.submit %>
+   <!-- <div class="actions" align='center'>
+   <%= f.label :upload %><%= f.button %>
+    -->
+
+
+    <div class="actions" align='center'>
+    <%= f.label :createUser, "upload", :class=>'inline betaLabelTextField' %>
+    <%= f.submit :upload, :class=>'betaTextField' %>
+    </div>
+    
   </div>
 <% end %>
