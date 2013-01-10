@@ -1,8 +1,15 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+
+   rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_url, :alert => exception.message
   
+end  
   # rescue_from CanCan::AccessDenied do |exception|
    #  redirect_to root_url, :alert => exception.message
+  
   before_filter :authenticate_member! 
-
-  end
+def current_ability
+   @current_ability ||= Ability.new(current_member)
+end
+end

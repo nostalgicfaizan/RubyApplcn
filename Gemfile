@@ -5,10 +5,11 @@ gem 'rails', '3.2.9'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-
-gem "paperclip", "~> 2.7"
-gem 'devise'
-gem "cancan"
+ #gem 'nifty-generators'
+ gem "paperclip", "~> 2.7"
+ gem 'devise'
+ gem "cancan"
+ #gem "bootstrap-sass" 
 
    
    group :development, :test do
