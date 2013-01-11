@@ -39,7 +39,8 @@ th
     <td><%= user.email %></td>
     <td><%= link_to 'Show', user %></td>
    
-     <% p current_member.administrator %>
+    <!--   <% p current_member.administrator %>
+     -->
     <% if user.email == current_member.email || current_member.administrator == true %>
 
       <td><%= link_to 'Edit', edit_user_path(user) %></td>

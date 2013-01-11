@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   before_filter :authenticate_member!
-   load_and_authorize_resource
+  # load_and_authorize_resource
   
   def index
     @users = User.all

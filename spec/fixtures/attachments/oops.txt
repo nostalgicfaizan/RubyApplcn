@@ -1,0 +1,6 @@
+http://rubylearning.com/satishtalim/ruby_inheritance.html
+
+
+
+http://zetcode.com/lang/rubytutorial/oop/
+http://zetcode.com/lang/rubytutorial/oop2/

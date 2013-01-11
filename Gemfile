@@ -5,17 +5,20 @@ gem 'rails', '3.2.9'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
- #gem 'nifty-generators'
+ gem 'nifty-generators'
  gem "paperclip", "~> 2.7"
  gem 'devise'
  gem "cancan"
- #gem "bootstrap-sass" 
+ gem "bootstrap-sass"
 
-   
-   group :development, :test do
-    gem 'sqlite3'
-    end
-   group :production do
+
+  group :test, :development do  
+   gem "rspec-rails", "~> 2.4"
+   gem 'sqlite3', '1.3.5'
+   gem 'factory_girl_rails'
+   end
+ 
+  group :production do
     gem 'pg'
     end
 	
