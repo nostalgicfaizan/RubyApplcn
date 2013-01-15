@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   before_filter :authenticate_member!
-  # load_and_authorize_resource
+  load_and_authorize_resource
   
   def index
     @users = User.all
@@ -44,6 +44,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     @user.email = current_member.email
+    #debugger
 
     respond_to do |format|
       if @user.save
