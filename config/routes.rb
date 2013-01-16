@@ -1,11 +1,12 @@
 Fileupload::Application.routes.draw do
 
-  devise_for :members do 
+    devise_for :members do
 
-   resources :users 
-   end 
+   resources :users
+    end 
    root :to => 'users#index'
-  
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

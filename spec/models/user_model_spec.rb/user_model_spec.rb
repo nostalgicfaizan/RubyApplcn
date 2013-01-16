@@ -4,10 +4,10 @@ require 'spec_helper'
 describe "User model" do
     describe "with valid params" do
       it 'takes name,picture and attachment for uploading files #valid when proper arguments are passed' do
-      User.new(:name =>"gabriel", :pic=>File.new(Rails.root + 'spec/fixtures/images/zoombiee.jpg'), :attach=>File.new(Rails.root + 'spec/fixtures/attachments/oops.txt')).should be_valid
+      User.new(:name =>"gabriel", :pic=>File.new(Rails.root + 'spec/fixtures/images/desert.jpg'), :attach=>File.new(Rails.root + 'spec/fixtures/attachments/oops.txt')).should be_valid
       end
      it 'could Upload without text attachment' do
-     User.new(:attach=>nil, :name=>"jamieee", :pic=>File.open(Rails.root + 'spec/fixtures/images/zoombiee.jpg')).should be_valid
+     User.new(:attach=>nil, :name=>"jamieee", :pic=>File.new(Rails.root + 'spec/fixtures/images/zoombiee.jpg')).should be_valid
     end
 
     it 'could upload with name and either picture or text file' do
@@ -17,10 +17,10 @@ describe "User model" do
 end
 
 describe "with invalid params" do
-it 'should not be uploaded without name and Pic attachment' do
+it 'should not be uploaded without name ' do
 User.new(:name=>nil, :pic=>nil, :attach=>File.new(Rails.root + 'spec/fixtures/attachments/oops.txt')).should_not be_valid
-end
-it 'name should not be valid without a string argument' do
+end 
+it 'name should not be valid without a string argument of name' do
 user = User.new(:name=>"123", :attach=>"abc.txt", :pic=>File.new(Rails.root + 'spec/fixtures/images/zoombiee.jpg'))
 user.name.should be_a(String)
 end

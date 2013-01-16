@@ -1,5 +1,5 @@
   #require File.expand_path('../../spec_helper', __FILE__)
-   require  'spec_helper'
+   require 'spec_helper'
 
   describe UsersController do 
       include Devise::TestHelpers
@@ -24,7 +24,7 @@
      	  { 
           :name => "MyString", 
           :attach => File.new(Rails.root + 'spec/fixtures/attachments/oops.txt'), 
-          :pic =>File.new(Rails.root + 'spec/fixtures/images/zoombiee.jpg')
+          :pic =>File.new(Rails.root + 'spec/fixtures/images/Desert.jpg')
         }
       end
       
@@ -34,7 +34,7 @@
 
     describe "GET #index" do
       it "assigns all users as @users" do
-      	user = User.create! valid_attributes
+      	user = User.create! valid_attributes  
       	#to invoke the actions before assigning the values
       	get :index
       	assigns(:users).should eq([user])
@@ -45,17 +45,15 @@
       end
     end
 
-
-
-     describe "GET #show" do
+      describe "GET #show" do
          it "assigns the requested user profile as @user" do
          user = User.create! valid_attributes
          get :show, {:id => user.to_param}#, valid_session
          assigns(:user).should eq(user)
       end
     end
-       describe "GET #new" do
-       it "assigns a new user as @user" do
+      describe "GET #new" do
+        it "assigns a new user as @user" do
         
         get :new, {}#, valid_session
         assigns(:user).should be_a_new(User)
