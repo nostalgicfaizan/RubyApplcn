@@ -1,58 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Fileupload</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "File Upload Applications" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "App_Name" %>">
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    
+    <%= csrf_meta_tags %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <header class="navbar navbar-fixed-top">
+      <nav class="navbar-inner">
+        <div class="container">
+          <%= render 'layouts/navigation' %>
+        </div>
+      </nav>
+    </header>
+    <div id="main" role="main">
+      <div class="container">
+        <div class="content">
+           <div class="row">
+            <div class="span9">
+              <%= render 'layouts/messages' %>
+              <%= yield %>
+            </div>
+          </div>
+          <footer >
+          </br>
+          </br>
+          </br>
+          </br>
+          </br>
+          </br>
+<p><b>Developed By NostalgicFaizan </b></p>
 
-<!-  STYLING  THE VIEWS -->
-<style type="text/css">
-body
-{
-background-color:#b0c4de;
-}
 
-h2 {color:green;}
-h4 {color:green;} 
-h1 {color:red;}
-h3 {color:blue;}
-
-.right
-{
-  position:absolute;
-  right: 100px;
-  width: 300px;
-}
-.left
-{
-  position:absolute;
-  left: 350px;
-  width: 300px;
- } 
- .link 
- {
-
- }
-</style>
-</head>
-
-<body>
- 
-  <div id="container">
-  	 <div id="user_nav">
-  	 	<% if member_signed_in? %>
-  	 	<b>Signed In As <%= current_member.email %> &nbsp&nbsp 
-  	 	<%=link_to "sign_out" , destroy_member_session_path,:method => "delete" %>
-  	 	<% else %>
-
-  	 	<%= link_to "sign_up" , new_member_registration_path %> or <%= link_to "sign_in", new_member_session_path %>
-  	 	<% end %>
-  	 </div>
-
- <p class="notice"><%= notice %></p
- <p class="alert"><%= alert %></p>
-
- <%= yield %>
-</body>
+          </footer>
+        </div>
+      </div> <!--! end of .container -->
+    </div>
+     <!--! end of #main -->
+  </body>
 </html>

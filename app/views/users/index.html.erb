@@ -1,33 +1,11 @@
-<!DOCTYPE html>
-<head>
-<style>
-body
-{
-background-color:#b0c4de;
-}
-h2 {color:green;}
-h2 {text-align: center;}
-h1 {color:green;}
-table,td, th
-{
-  border:1px solid brown;
-}
-th
-{
-  background-color: red;
-  color:blue;
-}
-</style> 
-</head>
-<body>
-<h1><marquee behavior="alternate"> WELCOME TO FILE UPLOAD </marquee></h1><br/><br/>
+<h1> WELCOME TO FILE UPLOAD </h1><br/>
+<h2 class ="span4"> Listing Users</h2>
 
-<h2> Listing Users</h2>
-
-<table align='center'>
+<table class="table span6 table-bordered table-condensed table-hover table-nonfluid">
   <tr>
     <th>Name</th>
     <th>Email</th>
+    
     <th></th>
     <th></th>
     <th></th>
@@ -37,21 +15,21 @@ th
   <tr>
     <td><%= user.name %></td>
     <td><%= user.email %></td>
-    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Show', user,:class => "btn btn-mini" %></td>
    
-    <!--   <% p current_member.administrator %>
-     -->
+    
     <% if user.email == current_member.email || current_member.administrator == true %>
 
-      <td><%= link_to 'Edit', edit_user_path(user) %></td>
-      <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <td><%= link_to 'Edit', edit_user_path(user) ,:class => "btn btn-mini" %></td>
+      <td><%= link_to 'Destroy', user,:class => "btn btn-mini btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
      </td>
-    <% end %>	
+    <% end %> 
   </tr>
 <% end %>
 </table>
 <br/>
-
-<h4>Do You want to Upload a File?</h4><br/>
-<%= link_to 'Click Here to Upload File ', new_user_path %><br/>
-</html>
+<br/><br/><br/>
+<div class ="span8">
+<h4 >Do You want to Upload File?</h4><br/>
+<%= link_to 'Click Here to Upload File ', new_user_path ,:class => "btn btn-primary" %><br/>
+</div>

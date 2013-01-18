@@ -1,46 +1,53 @@
 
-<%= image_tag @user.pic.url(:thumb)%><a href="<%= @user.pic.url%> "><h3>Click To View full Image File</h3></a><br /><br />
-	  
+<div class="well"><%= image_tag @user.pic.url(:thumb)%></br></br><a href="<%= @user.pic.url%> ">Click To View full Image File</a>
+</div> 
+<div class="well">   
   <a href="<%= @user.attach.url %> ">
-        <h2> Click here to Display Text File Attached </h2></a>
-    <br/><br /><br />
-	
+         Click here to Display Text File Attached </a>
+    </div>
     <% if @user.pic_file_name %>
- <p> 
-    <div class="right">
-       <b> Pic Details :</b><br/>
-       <h4>Pic File Name : <%= @user.pic_file_name %></h4>
-
-        <h4>Pic File Content Type : <%= @user.pic_content_type %></h4>
-        <h4>Pic File Size : <%= @user.pic_file_size %></h4>
-        <h4>Pic Updated At : <%= @user.pic_updated_at %></h4>
-   </div>
+  Pic Details
+    <table class="table table-bordered table-condensed table-hover table-nonfluid">
+      <tr>
+         <th>Pic File Name </th> 
+         <th>Pic File Content Type </th>
+         <th>Pic File Size </th> 
+         <th>Pic Updated At </th>
+         </tr><tr> 
+   <td><%= @user.pic_file_name %></td>
+   <td> <%= @user.pic_content_type %></td>
+   <td><%= @user.pic_file_size %></td>
+   <td><%= @user.pic_updated_at %></td>
+ </tr>
+   </table>
    <% end %>
-  </p>
+ 
 
    <% if @user.attach_file_name %>
-<p>
-  <div class="left">
-    <b>Attachment Details :</b></br>
-       <h4>Attach File Name : &nbsp&nbsp <%= @user.attach_file_name %></h4>
 
-       <h4>Attach File Content Type : &nbsp&nbsp <%= @user.attach_content_type %></h4>
+    Attachment Details :
+    <table class="table table-bordered table-condensed table-hover table-nonfluid">
+      <tr>
+         <th>Attach File Name </th> 
+         <th>Attach File Content Type</th>
+         <th>Attach File Size</th> 
+         <th>Attach Updated At</th>
+         </tr><tr> 
+   <td><%= @user.attach_file_name %></td>
+   <td> <%= @user.attach_content_type %></td>
+   <td><%= @user.attach_file_size %></td>
+   <td> <%= @user.attach_updated_at %></td>
+ </tr>
+   </table>
+ <% end %>
 
-       <h4>Attach File Size :  &nbsp&nbsp <%= @user.attach_file_size %></h4>
-     <h4>Attach Updated At :  &nbsp&nbsp <%= @user.attach_updated_at %></h4>
-   </div>
-   <% end %>
-</p>
-       
-<p>
   <b>Uploaded By:</b>
-  <%= @user.email %>
-</p>
+  <b><%= @user.email %></b>
 
 <div class="link">
   <!-- <% p current_member.administrator %>  -->
     <% if @user.email == current_member.email || current_member.administrator == true %>
-<%= link_to 'Edit', edit_user_path(@user) %> 
+<%= link_to 'Edit', edit_user_path(@user),:class => "btn btn-mini" %> 
 <% end %>
-| <%= link_to 'Back', users_path %>
+| <%= link_to 'Back', users_path,:class => "btn btn-mini" %>
 </div>

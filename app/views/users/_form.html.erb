@@ -1,7 +1,8 @@
 <%= form_for @user, :html => { :multipart => true } do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:
+      </h2>
 
       <ul>
       <% @user.errors.full_messages.each do |msg| %>
@@ -18,7 +19,7 @@
 
     <p align='center'>
        <b> Attachment </b>
-       <%= f.file_field :attach %>
+       <%= f.file_field :attach  %>
    </p><br/><br/>
    
     <p align='center's>
@@ -27,6 +28,6 @@
    </p><br/><br/> 
 
    <div class="actions" align='center'>
-      <%= f.submit :UPLOAD, :class=>'betaTextField' %>
+      <%= f.submit :UPLOAD, :class=>'betaTextField btn btn-primary' %>
    </div>
 <% end %>

@@ -9,7 +9,9 @@ gem 'rails', '3.2.11'
  gem "paperclip", "~> 2.7"
  gem 'devise'
  gem "cancan"
- gem "bootstrap-sass"
+ 
+ gem 'rspec-on-rails-matchers'
+ gem "shoulda-matchers"
 
 
   group :test, :development do  
@@ -27,7 +29,7 @@ gem 'rails', '3.2.11'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
+  gem "bootstrap-sass"
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
