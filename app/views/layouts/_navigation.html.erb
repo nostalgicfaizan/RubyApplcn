@@ -2,6 +2,7 @@
 <ul class="nav">
   <% if member_signed_in? %>
     <li>
+
     <%= link_to('Logout', destroy_member_session_path, :method=>'delete') %>
     </li>
   <% else %>
@@ -18,3 +19,9 @@
     </li>
   <% end %>
 </ul>
+<% if member_signed_in? %>
+  <ul class="pull-right">
+    <li><strong>Signed In As <%= current_member.email %></strong>
+  </li>
+</ul>
+<% end %>
