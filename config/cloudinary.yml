@@ -1,0 +1,21 @@
+
+#development:
+ # cloud_name: bluepine
+  #api_key: '181515568985127'
+  #api_secret: N3Gei2rErVVKhOxTda8td7lNEV0
+  #enhance_image_tag: true
+  #static_image_support: false
+
+#production:
+  #cloud_name: bluepine
+  #api_key: '181515568985127'
+  #api_secret: N3Gei2rErVVKhOxTda8td7lNEV0
+  #enhance_image_tag: true
+  #static_image_support: true
+
+#test:
+  #cloud_name: bluepine
+  #api_key: '181515568985127'
+  #api_secret: N3Gei2rErVVKhOxTda8td7lNEV0
+  #enhance_image_tag: true
+  #static_image_support: false

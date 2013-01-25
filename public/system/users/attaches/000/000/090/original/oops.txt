@@ -1,0 +1,8 @@
+http://rubylearning.com/satishtalim/ruby_inheritance.html
+
+
+
+http://zetcode.com/lang/rubytutorial/oop/
+http://zetcode.com/lang/rubytutorial/oop2/
+
+http://stackoverflow.com/questions/7260394/test-a-file-upload-using-rspec-rails

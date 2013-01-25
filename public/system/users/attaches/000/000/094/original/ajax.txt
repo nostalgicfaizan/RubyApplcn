@@ -1,0 +1,7 @@
+load:
+
+
+
+Revisit the UI including the colours. Reserve red colour for error messages
+Remove the marquee
+home page, table header has unnecessary columns at the end.

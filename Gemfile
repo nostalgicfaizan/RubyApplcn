@@ -5,15 +5,16 @@ gem 'rails', '3.2.11'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
- gem 'nifty-generators'
- gem "paperclip", "~> 2.7"
- gem 'devise'
- gem "cancan"
+  gem 'nifty-generators'
+  gem "paperclip", "~> 3.0"
+  gem 'devise'
+  gem "cancan"
+  #gem 'cloudinary'
+  gem "paperclip-dropbox", "~> 1.0"
  
- gem 'rspec-on-rails-matchers'
- gem "shoulda-matchers"
-
-
+  gem 'rspec-on-rails-matchers'
+  gem "shoulda-matchers"
+ 
   group :test, :development do  
    gem "rspec-rails", "~> 2.4"
    gem 'sqlite3', '1.3.5'
@@ -35,6 +36,7 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
+
 
 gem 'jquery-rails'
 

@@ -6,8 +6,8 @@ class ApplicationController < ActionController::Base
   
 end
  
-  # before_filter :authenticate_member! 
-def current_ability
-   @current_ability ||= Ability.new(current_member)
-end
+  before_filter :authenticate_member! 
+    def current_ability
+    @current_ability ||= Ability.new(current_member)
+  end
 end

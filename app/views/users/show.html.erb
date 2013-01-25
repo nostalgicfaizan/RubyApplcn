@@ -1,9 +1,10 @@
 
-<div class="well"><%= image_tag @user.pic.url(:thumb)%></br></br><a href="<%= @user.pic.url%> ">Click To View full Image File</a>
-</div> 
-<div class="well">   
-  <a href="<%= @user.attach.url %> ">
-         Click here to Display Text File Attached </a>
+   <div class="well"><%= image_tag @user.pic.url(:thumb)%> </br></br>
+       <%= link_to "Click To View full Image File", @user.pic.url , :target => "_blank"%> 
+   </div> 
+
+    <div class="well"> 
+        <%= link_to "Click here to Display Text File Attached", @user.attach.url, :target => "_blank" %>
     </div>
     <% if @user.pic_file_name %>
   Pic Details

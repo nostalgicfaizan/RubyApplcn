@@ -7,7 +7,13 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   
     attr_accessible :name, :attach, :pic
-    has_attached_file :pic, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+    has_attached_file :pic, 
+                      #:storage => :dropbox,
+                      #:dropbox_credentials => "#{Rails.root}/config/dropbox.yml",
+                      :styles => { :medium => "300x300>", :thumb => "100x100>" }
+                      #:dropbox_options => { :path => proc { |style| "#{style}/#{id}_#{pic.original_filename}" }}
+                      
+
     has_attached_file :attach
    
 
@@ -16,7 +22,7 @@ class User < ActiveRecord::Base
      validates_attachment_size :pic, :less_than => 5.megabytes
      validates_attachment_content_type :pic, :content_type => [ 'image/jpg', 'image/jpeg', 'image/png']
     
-     validate :pic_file_name_cannot_be_blank 
+     validate :pic_file_name_cannot_be_blank
 
      def pic_file_name_cannot_be_blank
      
