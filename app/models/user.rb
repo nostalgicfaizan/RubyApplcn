@@ -7,11 +7,12 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   
     attr_accessible :name, :attach, :pic
-    has_attached_file :pic, 
-                      #:storage => :dropbox,
-                      #:dropbox_credentials => "#{Rails.root}/config/dropbox.yml",
-                      :styles => { :medium => "300x300>", :thumb => "100x100>" }
-                      #:dropbox_options => { :path => proc { |style| "#{style}/#{id}_#{pic.original_filename}" }}
+    has_attached_file :pic, :styles => { :medium => "300x300>", :thumb => "100x100>" },
+                      :storage => :dropbox,
+                      :dropbox_credentials => "#{Rails.root}/config/dropbox.yml",
+                      :dropbox_options => { 
+                           :path => proc { |style| "photos/#{style}/#{id}_#{pic.original_filename}" }
+                         }
                       
 
     has_attached_file :attach

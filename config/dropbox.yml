@@ -1,7 +1,7 @@
 
-#app_key: <%= ENV["4vvhn8lmm5sg7b3"] %>
-#app_secret: <%= ENV["d5214yh6kptht27"] %>
-#access_token: <%= ENV["ppbv19dcoz147hj"] %>
-#access_token_secret: <%= ENV["1czufjsfex7swb0"] %>
-#user_id: <%= ENV["FileBoard1234"] %>
-#access_type: <%= ENV["app_folder"] %>
+app_key: "4vvhn8lmm5sg7b3"
+app_secret: "d5214yh6kptht27"
+access_token: "ppbv19dcoz147hj"
+access_token_secret: "1czufjsfex7swb0"
+user_id: "ahmadfaizan99@gmail.com"
+access_type: "app_folder"
